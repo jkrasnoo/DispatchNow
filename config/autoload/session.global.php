@@ -20,5 +20,8 @@ return [
             Laminas\Session\Validator\HttpUserAgent::class,
             Laminas\Session\Validator\RemoteAddr::class
         ]
+    ],
+    'session_save_handler' => [
+        'cache' => 'Dispatch\Cache'
     ]
 ];

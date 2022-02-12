@@ -6,7 +6,10 @@ namespace Application\Controller;
 
 use Interop\Container\ContainerInterface;
 use Laminas\Mvc\Controller\AbstractActionController;
+use Laminas\Session\Container;
+use Laminas\Session\SessionManager;
 use Laminas\View\Model\ViewModel;
+use Laminas\Session\SaveHandler\Cache;
 
 
 
@@ -25,7 +28,14 @@ class SecurityController extends AbstractActionController
     public function loginAction() : ViewModel
     {
         $serviceManager = $this->getServiceManager();
-
+        $container = new Container('general');
+        var_dump($container);
+        if (! isset($container->test))
+        {
+            var_dump("set test");
+            $container->test = "test";
+        }
+        var_dump($container->test);
         return new ViewModel();
     }
 

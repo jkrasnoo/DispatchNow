@@ -41,6 +41,7 @@ return [
             'Application\Db\WriteAdapter' => \Laminas\Db\Adapter\AdapterAbstractServiceFactory::class,
             'Application\Db\ReadAdapter' => \Laminas\Db\Adapter\AdapterAbstractServiceFactory::class,
             'Laminas\Session\Config\ConfigInterface' => \Laminas\Session\Service\SessionConfigFactory::class,
+            'Laminas\Session\SaveHandler\SaveHandlerInterface' => \Application\Service\CacheSessionSaveHandlerFactory::class
         ]
     ]
 ];

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 return [
     'caches' => [
-        'Dispatch/Cache' => [
+        'Dispatch\Cache' => [
             'adapter' => [
                 'name' => 'memcached',
                 'options' => [

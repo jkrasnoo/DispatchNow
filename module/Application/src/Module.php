@@ -36,12 +36,10 @@ class Module
 
         $container = new Container('initialized');
 
-        /**
         if (isset($container->init))
         {
             return;
         }
-        */
 
         $request = $e->getApplication()->getRequest();
         $server = $request->getServer();
@@ -76,12 +74,5 @@ class Module
 
             $chain->attach('session.validate', array($validator, 'isValid'));
         }
-    }
-
-    public function getServiceConfig()
-    {
-        return [
-
-        ];
     }
 }
