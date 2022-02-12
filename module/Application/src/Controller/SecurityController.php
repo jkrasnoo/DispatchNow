@@ -28,14 +28,7 @@ class SecurityController extends AbstractActionController
     public function loginAction() : ViewModel
     {
         $serviceManager = $this->getServiceManager();
-        $container = new Container('general');
-        var_dump($container);
-        if (! isset($container->test))
-        {
-            var_dump("set test");
-            $container->test = "test";
-        }
-        var_dump($container->test);
+
         return new ViewModel();
     }
 
