@@ -21,6 +21,9 @@ class RegistrationController extends AbstractActionController
 
     public function indexAction() : ViewModel
     {
+        $serviceManager = $this->getServiceManager();
+        $writeDbAdapter = $serviceManager->get('Application\Db\WriteAdapter');
+        var_dump($writeDbAdapter);
         return new ViewModel();
     }
 
